@@ -117,7 +117,7 @@ changeSlide(index){
   this.dist.finalPosition = activeSlide.position;
 
   this.changeActiveClass();
-
+  this.dist.movement = 0; 
 }
 
 changeActiveClass(){
@@ -170,20 +170,11 @@ this.activeNextSlide = this.activeNextSlide.bind(this);
   this.onResize = debounce( this.onResize.bind(this), 200 );
 }
 
-init(){
-  
-  this.bindEvents();
-  this.transition(true);
-  this.addSlideEvents();
-  this.slidesConfig();
-  this.addResizeEvent();
-  this.changeSlide(1);
-  
-return this;
-}
 
 
 
+
+//o codigo abaixo deixa o slide infinito
 /*
 startAutoSlide() {
   this.stopAutoSlide(); // Para evitar que a função seja chamada várias vezes
@@ -194,14 +185,30 @@ startAutoSlide() {
       this.index.next = 0;
     }
     this.changeSlide(next);
-  }, 2000); // Tempo em milissegundos
+  }, 5000); // Tempo em milissegundos
 }
 
 stopAutoSlide() {
   clearInterval(this.autoSlideInterval);
 }
-
 */
+
+
+
+init(){
+  
+  this.bindEvents();
+  this.transition(true);
+  this.addSlideEvents();
+  this.slidesConfig();
+  this.addResizeEvent();
+  this.changeSlide(0);
+  
+return this;
+}
+
+
+
 
 }
 
