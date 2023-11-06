@@ -1,0 +1,6 @@
+# projeto-empresa
+
+Projeto desenvolvido para vaga de Programador da empresa Data Campos!!!
+foram utilizadas as seguintes tecnologias no projeto => html/css/js...
+padrões de responsividade e de rotas foram utilizados......
+slides proprios e layout proprio desenvolvido por mim.!!
